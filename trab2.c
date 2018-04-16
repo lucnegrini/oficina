@@ -56,8 +56,27 @@ void Carrega_pontos(pontos *p){
 	}
 }
 
-void menu(pontos *p){
+void Menu(pontos *p){
+	if (p.matriz == Null)
+		Carrega_pontos(p);
+	
+	Imprime_Matriz(p);
 	
 
+	while (1){
+	printf("************************************************************");
+	printf("______________Selecione a opção desejada:___________________");
+	
+	switch
+	
+
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 }
