@@ -8,7 +8,7 @@ typedef struct p{
 }pontos;
 
 
-void menu(pontos *p){
+void Carrega_pontos(pontos *p){
 	*p.matriz = (int*)  malloc(sizeof(tam * int*));
 	for (int i=0; i<tam; i++){
 		for (int j=0; j<tam; j++){
@@ -54,10 +54,10 @@ void menu(pontos *p){
 			printf("\nValores inválidos, digite valores positivos!\n"); 
 	
 	}
+}
 
+void menu(pontos *p){
+	
 
-	
-	
-	
 	
 }
