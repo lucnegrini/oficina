@@ -9,11 +9,12 @@ typedef struct p{
 
 
 void Carrega_pontos(pontos *p){
-	*p.matriz = (int*)  malloc(sizeof(tam * int*));
+	int tam;
+	*p->matriz = (int*)  malloc(sizeof(int**tam));
 	for (int i=0; i<tam; i++){
 		for (int j=0; j<tam; j++){
-		*p.matriz[i][j] = (int) malloc(sizeof(tam * int));
-		*p.matriz[i][j] = 0;
+		*p->matriz[i][j] = (int) malloc(sizeof(int*tam));
+		*p->matriz[i][j] = 0;
 		}
 	}
 	
@@ -58,18 +59,44 @@ void Carrega_pontos(pontos *p){
 
 void Menu(pontos *p){
 	if (p.matriz == Null)
-		Carrega_pontos(p);
+	//	Carrega_pontos(p);
 	
-	Imprime_Matriz(p);
-	
+	//Imprime_Matriz(p);
+	int i=0
+	char c;
+	while (i<1){
+	printf("************************************************************\n");
+	printf("______________Selecione a opção desejada:___________________\n");
+	printf("______________Escala(e)_____________________________________\n");
+	printf("______________Translação(t)_________________________________\n");
+	printf("______________Rotação(r)____________________________________\n");
+	printf("______________Sair(s)_______________________________________\n");
 
-	while (1){
-	printf("************************************************************");
-	printf("______________Selecione a opção desejada:___________________");
-	
-	switch
-	
+	scanf("%c", &c);
 
+	switch(c)
+		case 'E':
+		case 'e':
+			//escala(p);
+			printf("e");
+			break;
+		case 'T':
+		case 't':
+			//translacao(p);
+			printf("t");
+			break;
+		case 'R':
+		case 'r':
+			//rotacao(p);
+			printf("r");
+			break;
+		case 'S':
+		case 's':
+			i++;
+			break;
+		
+		default:
+			printf("Opção inválida! Digite novamente\n");
 	}
 	
 	
@@ -79,4 +106,14 @@ void Menu(pontos *p){
 	
 	
 	
+}
+
+
+
+
+
+int main(){
+	pontos p;
+	Menu(p);
+
 }
